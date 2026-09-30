@@ -1,0 +1,2066 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Rohit ❤️ Pavani - Wedding Invitation</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Great+Vibes&family=Noto+Serif+Telugu:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+    --maroon:#65152a;
+    --dark-maroon:#3d0918;
+    --gold:#d7a936;
+    --light-gold:#f5d889;
+    --cream:#fff7df;
+    --pink:#d86b83;
+}
+
+body{
+    min-height:100vh;
+    background:
+    radial-gradient(
+        circle at top,
+        #7d2740 0%,
+        #3d0918 45%,
+        #21040d 100%
+    );
+
+    color:var(--cream);
+    font-family:"Cinzel",serif;
+    overflow-x:hidden;
+}
+
+
+/* MUSIC BUTTON */
+
+.music-btn{
+    position:fixed;
+    top:18px;
+    right:18px;
+    z-index:1000;
+
+    width:48px;
+    height:48px;
+
+    border-radius:50%;
+    border:2px solid var(--light-gold);
+
+    background:rgba(55,5,20,.8);
+
+    color:var(--light-gold);
+
+    cursor:pointer;
+
+    font-size:20px;
+
+    box-shadow:
+    0 0 20px rgba(245,216,137,.35);
+}
+
+
+/* FLOWER PETALS */
+
+.petal{
+    position:fixed;
+    top:-50px;
+
+    z-index:1;
+
+    pointer-events:none;
+
+    font-size:18px;
+
+    animation:fall linear infinite;
+}
+
+@keyframes fall{
+
+    0%{
+        transform:
+        translateY(-50px)
+        rotate(0deg);
+
+        opacity:0;
+    }
+
+    10%{
+        opacity:1;
+    }
+
+    100%{
+        transform:
+        translateY(110vh)
+        translateX(100px)
+        rotate(360deg);
+
+        opacity:0;
+    }
+}
+
+
+/* GOLDEN SPARKLES */
+
+.sparkle{
+    position:fixed;
+
+    width:4px;
+    height:4px;
+
+    background:var(--light-gold);
+
+    border-radius:50%;
+
+    pointer-events:none;
+
+    animation:
+    sparkle 2s infinite ease-in-out;
+
+    z-index:1;
+}
+
+@keyframes sparkle{
+
+    0%,100%{
+        opacity:.2;
+        transform:scale(.5);
+    }
+
+    50%{
+        opacity:1;
+        transform:scale(1.5);
+    }
+}
+
+
+/* SECTIONS */
+
+.section{
+    display:none;
+
+    min-height:100vh;
+
+    padding:70px 20px 40px;
+
+    align-items:center;
+    justify-content:center;
+
+    position:relative;
+}
+
+.section.active{
+    display:flex;
+
+    animation:
+    pageIn .8s ease;
+}
+
+@keyframes pageIn{
+
+    from{
+        opacity:0;
+        transform:
+        translateY(30px)
+        scale(.98);
+    }
+
+    to{
+        opacity:1;
+        transform:
+        translateY(0)
+        scale(1);
+    }
+}
+
+
+/* MAIN CARD */
+
+.card{
+
+    width:min(920px,95%);
+
+    min-height:650px;
+
+    position:relative;
+
+    padding:55px 35px;
+
+    border:2px solid var(--gold);
+
+    border-radius:28px;
+
+    background:
+
+    linear-gradient(
+        rgba(75,8,28,.92),
+        rgba(45,5,17,.96)
+    ),
+
+    radial-gradient(
+        circle,
+        #9b3852,
+        #3d0918
+    );
+
+    box-shadow:
+
+    0 0 0 7px
+    rgba(215,169,54,.12),
+
+    0 0 45px
+    rgba(215,169,54,.25),
+
+    inset 0 0 50px
+    rgba(245,216,137,.08);
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    overflow:hidden;
+}
+
+
+/* CARD CORNERS */
+
+.card::before,
+.card::after{
+
+    content:"✦";
+
+    position:absolute;
+
+    color:var(--light-gold);
+
+    font-size:75px;
+
+    opacity:.5;
+}
+
+.card::before{
+
+    top:10px;
+    left:25px;
+}
+
+.card::after{
+
+    bottom:10px;
+    right:25px;
+}
+
+
+/* FLOWERS */
+
+.flower{
+
+    position:absolute;
+
+    color:var(--pink);
+
+    font-size:45px;
+
+    filter:
+    drop-shadow(
+        0 0 8px
+        rgba(216,107,131,.5)
+    );
+}
+
+.flower.one{
+
+    top:30px;
+    right:35px;
+}
+
+.flower.two{
+
+    bottom:35px;
+    left:35px;
+}
+
+.flower.three{
+
+    bottom:25px;
+    right:45px;
+}
+
+.flower.four{
+
+    top:30px;
+    left:50px;
+}
+
+
+/* TEXT */
+
+.telugu{
+
+    font-family:
+    "Noto Serif Telugu",
+    serif;
+}
+
+.small-title{
+
+    font-size:17px;
+
+    letter-spacing:4px;
+
+    color:var(--light-gold);
+
+    margin-bottom:20px;
+}
+
+.main-title{
+
+    font-family:
+    "Great Vibes",
+    cursive;
+
+    font-size:
+    clamp(55px,9vw,100px);
+
+    color:var(--light-gold);
+
+    text-shadow:
+    0 0 20px
+    rgba(245,216,137,.35);
+}
+
+.couple{
+
+    font-family:
+    "Great Vibes",
+    cursive;
+
+    font-size:
+    clamp(48px,8vw,90px);
+
+    color:#fff0b9;
+
+    margin:25px 0;
+}
+
+.heart{
+
+    color:#ff829c;
+
+    display:inline-block;
+
+    animation:
+    heartbeat 1.4s infinite;
+}
+
+@keyframes heartbeat{
+
+    0%,100%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.2);
+    }
+}
+
+.gold-line{
+
+    width:170px;
+
+    height:2px;
+
+    background:
+    linear-gradient(
+        to right,
+        transparent,
+        var(--gold),
+        transparent
+    );
+
+    margin:18px auto;
+}
+
+.subtitle{
+
+    font-size:18px;
+
+    color:#ffe9aa;
+
+    letter-spacing:2px;
+}
+
+
+/* BUTTONS */
+
+.buttons{
+
+    display:flex;
+
+    gap:15px;
+
+    justify-content:center;
+
+    margin-top:35px;
+
+    flex-wrap:wrap;
+}
+
+.btn{
+
+    border:1px solid var(--gold);
+
+    padding:13px 27px;
+
+    border-radius:30px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #8d2945,
+        #5a1027
+    );
+
+    color:#fff3c4;
+
+    font-family:"Cinzel",serif;
+
+    font-size:14px;
+
+    letter-spacing:1px;
+
+    cursor:pointer;
+
+    transition:.3s ease;
+
+    box-shadow:
+    0 5px 20px
+    rgba(0,0,0,.25);
+}
+
+.btn:hover{
+
+    transform:
+    translateY(-4px);
+
+    background:
+    linear-gradient(
+        135deg,
+        #b34864,
+        #74152f
+    );
+
+    box-shadow:
+    0 0 25px
+    rgba(245,216,137,.35);
+}
+
+
+/* NAMES */
+
+.name{
+
+    font-family:
+    "Great Vibes",
+    cursive;
+
+    font-size:
+    clamp(55px,9vw,85px);
+
+    color:var(--light-gold);
+
+    margin:5px 0;
+}
+
+.family{
+
+    font-size:18px;
+
+    color:#ffe5a0;
+
+    margin:15px;
+
+    letter-spacing:2px;
+}
+
+
+/* DATE */
+
+.date-box{
+
+    margin:25px 0;
+
+    padding:30px 50px;
+
+    border:
+    1px solid
+    rgba(245,216,137,.6);
+
+    border-radius:20px;
+
+    background:
+    rgba(255,255,255,.04);
+
+    box-shadow:
+    inset 0 0 30px
+    rgba(245,216,137,.05);
+}
+
+.date{
+
+    font-size:
+    clamp(35px,6vw,60px);
+
+    color:var(--light-gold);
+
+    margin:12px 0;
+}
+
+.time{
+
+    font-size:
+    clamp(30px,5vw,50px);
+
+    color:#ffbdca;
+
+    margin:10px 0;
+}
+
+
+/* VENUE */
+
+.venue-icon{
+
+    font-size:65px;
+
+    margin-bottom:15px;
+}
+
+.venue-name{
+
+    font-size:
+    clamp(28px,5vw,45px);
+
+    color:var(--light-gold);
+
+    margin:15px 0;
+}
+
+.address{
+
+    max-width:600px;
+
+    color:#ffe9b1;
+
+    line-height:1.8;
+
+    font-size:18px;
+}
+
+
+/* PARENTS */
+
+.parents-container{
+
+    width:100%;
+
+    display:grid;
+
+    grid-template-columns:
+    1fr 1fr;
+
+    gap:25px;
+
+    margin-top:25px;
+}
+
+.parent-box{
+
+    padding:30px 20px;
+
+    border:
+    1px solid
+    rgba(245,216,137,.55);
+
+    border-radius:20px;
+
+    background:
+    rgba(255,255,255,.035);
+}
+
+.parent-box h3{
+
+    color:var(--light-gold);
+
+    font-size:23px;
+
+    margin-bottom:10px;
+}
+
+.parent-box p{
+
+    color:#ffe5ae;
+
+    line-height:1.8;
+}
+
+.parent-names{
+
+    font-size:25px;
+
+    color:#fff0be !important;
+
+    margin-top:10px;
+}
+
+
+/* TIMELINE */
+
+.timeline{
+
+    position:relative;
+
+    width:min(600px,100%);
+
+    margin:30px auto;
+}
+
+.timeline-item{
+
+    position:relative;
+
+    padding:25px;
+
+    margin:20px 0;
+
+    border-left:
+    3px solid
+    var(--gold);
+
+    background:
+    rgba(255,255,255,.035);
+
+    border-radius:
+    0 20px 20px 0;
+
+    text-align:left;
+}
+
+.timeline-item h3{
+
+    color:var(--light-gold);
+
+    margin-bottom:10px;
+}
+
+.timeline-item p{
+
+    color:#ffdf9d;
+
+    font-size:25px;
+}
+
+
+/* FINAL SECTION */
+
+.final-message{
+
+    max-width:700px;
+
+    line-height:1.9;
+
+    color:#ffe8b0;
+
+    font-size:17px;
+}
+
+.final-names{
+
+    font-family:
+    "Great Vibes",
+    cursive;
+
+    font-size:
+    clamp(55px,9vw,90px);
+
+    color:var(--light-gold);
+
+    margin:20px 0;
+}
+
+.final-details{
+
+    margin:20px 0;
+
+    color:#ffe5a3;
+
+    line-height:2.2;
+
+    font-size:18px;
+}
+
+.thank-you{
+
+    font-family:
+    "Great Vibes",
+    cursive;
+
+    color:#ffb8c6;
+
+    font-size:
+    clamp(35px,6vw,55px);
+
+    margin-top:25px;
+}
+
+
+/* DIYA */
+
+.diyas{
+
+    display:flex;
+
+    gap:35px;
+
+    margin:20px 0;
+
+    font-size:42px;
+}
+
+.diya{
+
+    animation:
+    diyaGlow 1.6s infinite alternate;
+}
+
+@keyframes diyaGlow{
+
+    from{
+        filter:
+        drop-shadow(
+            0 0 3px
+            #ffb13b
+        );
+    }
+
+    to{
+        filter:
+        drop-shadow(
+            0 0 20px
+            #ffd56b
+        );
+    }
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width:700px){
+
+    .section{
+
+        padding:
+        55px 12px 25px;
+    }
+
+    .card{
+
+        min-height:600px;
+
+        padding:
+        50px 20px;
+
+        border-radius:22px;
+    }
+
+    .parents-container{
+
+        grid-template-columns:1fr;
+    }
+
+    .small-title{
+
+        font-size:13px;
+
+        letter-spacing:2px;
+    }
+
+    .subtitle{
+
+        font-size:14px;
+    }
+
+    .date-box{
+
+        padding:25px 20px;
+    }
+
+    .flower{
+
+        font-size:30px;
+    }
+
+    .btn{
+
+        width:150px;
+    }
+
+    .venue-name{
+
+        font-size:32px;
+    }
+
+    .address{
+
+        font-size:16px;
+    }
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- MUSIC BUTTON -->
+
+<button
+class="music-btn"
+id="musicBtn"
+onclick="toggleMusic()">
+
+🎵
+
+</button>
+
+
+<!-- FLOATING PETALS -->
+
+<div id="petals"></div>
+
+
+<!-- GOLDEN SPARKLES -->
+
+<div id="sparkles"></div>
+
+
+
+<!-- =====================================================
+     SECTION 1
+===================================================== -->
+
+<section
+class="section active"
+id="section1">
+
+<div class="card">
+
+    <div class="flower one">🌸</div>
+    <div class="flower two">🌺</div>
+    <div class="flower three">🌷</div>
+    <div class="flower four">🌹</div>
+
+
+    <div class="diyas">
+
+        <span class="diya">🪔</span>
+        <span class="diya">🪔</span>
+
+    </div>
+
+
+    <div class="small-title telugu">
+
+        శుభ వివాహ ఆహ్వానం
+
+    </div>
+
+
+    <div class="main-title">
+
+        Wedding Invitation
+
+    </div>
+
+
+    <div class="gold-line"></div>
+
+
+    <div class="couple">
+
+        Rohit
+        <span class="heart">❤️</span>
+        Pavani
+
+    </div>
+
+
+    <p class="subtitle">
+
+        A Celebration of Love,
+        Family & Togetherness
+
+    </p>
+
+
+    <div class="buttons">
+
+        <button
+        class="btn"
+        onclick="nextSection(2)">
+
+            💍 Open Invitation →
+
+        </button>
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SECTION 2
+===================================================== -->
+
+<section
+class="section"
+id="section2">
+
+<div class="card">
+
+    <div class="flower one">🌸</div>
+    <div class="flower two">🌺</div>
+
+
+    <div class="small-title">
+
+        TOGETHER WITH THEIR FAMILIES
+
+    </div>
+
+
+    <div class="name">
+
+        Rohit
+
+    </div>
+
+
+    <div
+    class="heart"
+    style="font-size:35px;">
+
+        ❤️
+
+    </div>
+
+
+    <div class="name">
+
+        Pavani
+
+    </div>
+
+
+    <div class="gold-line"></div>
+
+
+    <div class="family">
+
+        Balaji Family
+
+    </div>
+
+
+    <div
+    style="
+    color:#eabf67;
+    font-size:25px;">
+
+        &
+
+    </div>
+
+
+    <div class="family">
+
+        Gadi Family
+
+    </div>
+
+
+    <div class="buttons">
+
+        <button
+        class="btn"
+        onclick="prevSection(1)">
+
+            ← Back
+
+        </button>
+
+
+        <button
+        class="btn"
+        onclick="nextSection(3)">
+
+            Next →
+
+        </button>
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SECTION 3
+===================================================== -->
+
+<section
+class="section"
+id="section3">
+
+<div class="card">
+
+    <div class="flower one">🌷</div>
+    <div class="flower four">🌹</div>
+
+
+    <div class="small-title">
+
+        SAVE THE DATE
+
+    </div>
+
+
+    <div class="date-box">
+
+        <div style="font-size:25px;">
+
+            📅
+
+        </div>
+
+
+        <div class="date">
+
+            October 8th
+
+        </div>
+
+
+        <div class="gold-line"></div>
+
+
+        <div style="font-size:23px;">
+
+            💍 Marriage Muhurtam
+
+        </div>
+
+
+        <div class="time">
+
+            11:00 PM
+
+        </div>
+
+    </div>
+
+
+    <p class="subtitle">
+
+        A beautiful beginning to a
+        lifetime of togetherness
+
+    </p>
+
+
+    <div class="buttons">
+
+        <button
+        class="btn"
+        onclick="prevSection(2)">
+
+            ← Back
+
+        </button>
+
+
+        <button
+        class="btn"
+        onclick="nextSection(4)">
+
+            Next →
+
+        </button>
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SECTION 4 - VENUE
+===================================================== -->
+
+<section
+class="section"
+id="section4">
+
+<div class="card">
+
+    <div class="flower one">🌸</div>
+    <div class="flower two">🌺</div>
+
+
+    <div class="small-title">
+
+        WEDDING VENUE
+
+    </div>
+
+
+    <div class="venue-icon">
+
+        🏛️
+
+    </div>
+
+
+    <div class="venue-name">
+
+        Kranthi Kalyana Vedika
+
+    </div>
+
+
+    <div class="gold-line"></div>
+
+
+    <div class="address">
+
+        📍 Vatluru, Andhra Pradesh
+
+    </div>
+
+
+    <div
+    class="buttons">
+
+        <button
+        class="btn"
+        onclick="openLocation()">
+
+            📍 View Location
+
+        </button>
+
+    </div>
+
+
+    <div class="buttons">
+
+        <button
+        class="btn"
+        onclick="prevSection(3)">
+
+            ← Back
+
+        </button>
+
+
+        <button
+        class="btn"
+        onclick="nextSection(5)">
+
+            Next →
+
+        </button>
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SECTION 5 - PARENTS
+===================================================== -->
+
+<section
+class="section"
+id="section5">
+
+<div class="card">
+
+    <div class="flower one">🌸</div>
+    <div class="flower three">🌷</div>
+
+
+    <div class="small-title">
+
+        WITH THE BLESSINGS OF OUR FAMILIES
+
+    </div>
+
+
+    <div class="parents-container">
+
+
+        <!-- GROOM FAMILY -->
+
+        <div class="parent-box">
+
+            <h3>
+
+                Groom's Family
+
+            </h3>
+
+
+            <p>
+
+                Balaji Family
+
+            </p>
+
+
+            <p
+            style="margin-top:15px;">
+
+                With the blessings of
+
+            </p>
+
+
+            <p class="parent-names">
+
+                Lakshmi
+                <br>
+                &
+                <br>
+                Nageswara Rao
+
+            </p>
+
+        </div>
+
+
+
+        <!-- BRIDE FAMILY -->
+
+        <div class="parent-box">
+
+            <h3>
+
+                Bride's Family
+
+            </h3>
+
+
+            <p>
+
+                Gadi Family
+
+            </p>
+
+
+            <p
+            style="margin-top:15px;">
+
+                With the blessings of
+
+            </p>
+
+
+            <p class="parent-names">
+
+                Sujata
+                <br>
+                &
+                <br>
+                Durgarao
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="buttons">
+
+        <button
+        class="btn"
+        onclick="prevSection(4)">
+
+            ← Back
+
+        </button>
+
+
+        <button
+        class="btn"
+        onclick="nextSection(6)">
+
+            Next →
+
+        </button>
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SECTION 6 - CELEBRATIONS
+===================================================== -->
+
+<section
+class="section"
+id="section6">
+
+<div class="card">
+
+    <div class="flower one">🌺</div>
+    <div class="flower four">🌹</div>
+
+
+    <div class="small-title">
+
+        WEDDING CELEBRATIONS
+
+    </div>
+
+
+    <div class="timeline">
+
+
+        <!-- MARRIAGE -->
+
+        <div class="timeline-item">
+
+            <h3>
+
+                💍 Marriage Ceremony
+
+            </h3>
+
+
+            <p>
+
+                Muhurtam – 11:00 PM
+
+            </p>
+
+        </div>
+
+
+
+        <!-- DINNER -->
+
+        <div class="timeline-item">
+
+            <h3>
+
+                🍽️ Dinner
+
+            </h3>
+
+
+            <p>
+
+                8:00 PM
+
+            </p>
+
+        </div>
+
+
+
+        <!-- VENUE -->
+
+        <div class="timeline-item">
+
+            <h3>
+
+                🏛️ Venue
+
+            </h3>
+
+
+            <p style="font-size:20px;">
+
+                Kranthi Kalyana Vedika
+
+                <br>
+
+                📍 Vatluru,
+                Andhra Pradesh
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="buttons">
+
+        <button
+        class="btn"
+        onclick="prevSection(5)">
+
+            ← Back
+
+        </button>
+
+
+        <button
+        class="btn"
+        onclick="nextSection(7)">
+
+            Next →
+
+        </button>
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SECTION 7 - FINAL INVITATION
+===================================================== -->
+
+<section
+class="section"
+id="section7">
+
+<div class="card">
+
+    <div class="flower one">🌸</div>
+    <div class="flower two">🌺</div>
+    <div class="flower three">🌷</div>
+    <div class="flower four">🌹</div>
+
+
+    <div class="small-title">
+
+        YOU ARE WARMLY INVITED
+
+    </div>
+
+
+    <p class="final-message">
+
+        We warmly invite you and your family
+        to celebrate the wedding of
+
+    </p>
+
+
+    <div class="final-names">
+
+        Rohit
+        <span class="heart">❤️</span>
+        Pavani
+
+    </div>
+
+
+    <div class="gold-line"></div>
+
+
+    <p class="subtitle">
+
+        With the blessings of
+
+    </p>
+
+
+    <div class="final-details">
+
+
+        <strong>
+
+            Lakshmi & Nageswara Rao
+
+        </strong>
+
+
+        <br>
+
+        and
+
+        <br>
+
+
+        <strong>
+
+            Sujata & Durgarao
+
+        </strong>
+
+
+        <br><br>
+
+
+        📅 October 8th
+
+        <br>
+
+
+        💍 Muhurtam – 11:00 PM
+
+        <br>
+
+
+        🍽️ Dinner – 8:00 PM
+
+        <br><br>
+
+
+        🏛️
+
+        <strong>
+
+            Kranthi Kalyana Vedika
+
+        </strong>
+
+        <br>
+
+
+        📍 Vatluru, Andhra Pradesh
+
+    </div>
+
+
+    <!-- MAP BUTTON -->
+
+    <div class="buttons">
+
+        <button
+        class="btn"
+        onclick="openLocation()">
+
+            📍 View Venue Location
+
+        </button>
+
+    </div>
+
+
+    <p class="final-message">
+
+        💐 Your presence and blessings
+        will make our celebration
+        even more special. 💐
+
+    </p>
+
+
+    <div class="thank-you">
+
+        ❤️ We Await Your Presence ❤️
+
+    </div>
+
+
+    <div class="buttons">
+
+        <button
+        class="btn"
+        onclick="prevSection(6)">
+
+            ← Back
+
+        </button>
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+<script>
+
+
+/* =====================================================
+   SECTION NAVIGATION
+===================================================== */
+
+function nextSection(number){
+
+    document
+    .querySelectorAll(".section")
+    .forEach(section => {
+
+        section.classList.remove("active");
+
+    });
+
+
+    document
+    .getElementById("section" + number)
+    .classList.add("active");
+
+
+    window.scrollTo({
+
+        top:0,
+
+        behavior:"smooth"
+
+    });
+
+}
+
+
+
+function prevSection(number){
+
+    document
+    .querySelectorAll(".section")
+    .forEach(section => {
+
+        section.classList.remove("active");
+
+    });
+
+
+    document
+    .getElementById("section" + number)
+    .classList.add("active");
+
+
+    window.scrollTo({
+
+        top:0,
+
+        behavior:"smooth"
+
+    });
+
+}
+
+
+
+/* =====================================================
+   GOOGLE MAPS
+===================================================== */
+
+function openLocation(){
+
+    const mapUrl =
+    "https://www.google.com/maps/search/?api=1&query=Kranthi+Kalyana+Vedika+Vatluru+Andhra+Pradesh";
+
+
+    window.open(
+        mapUrl,
+        "_blank"
+    );
+
+}
+
+
+
+/* =====================================================
+   FLOATING FLOWER PETALS
+===================================================== */
+
+const petalContainer =
+document.getElementById("petals");
+
+
+const petalSymbols = [
+
+    "🌸",
+    "🌺",
+    "🌷",
+    "🌹",
+    "🌼"
+
+];
+
+
+function createPetal(){
+
+    const petal =
+    document.createElement("div");
+
+
+    petal.className =
+    "petal";
+
+
+    petal.innerHTML =
+    petalSymbols[
+        Math.floor(
+            Math.random() *
+            petalSymbols.length
+        )
+    ];
+
+
+    petal.style.left =
+    Math.random() * 100 + "vw";
+
+
+    petal.style.animationDuration =
+    (6 + Math.random() * 7) + "s";
+
+
+    petal.style.fontSize =
+    (12 + Math.random() * 15) + "px";
+
+
+    petalContainer.appendChild(
+        petal
+    );
+
+
+    setTimeout(() => {
+
+        petal.remove();
+
+    },14000);
+
+}
+
+
+setInterval(
+    createPetal,
+    700
+);
+
+
+
+/* =====================================================
+   GOLDEN SPARKLES
+===================================================== */
+
+const sparkleContainer =
+document.getElementById("sparkles");
+
+
+function createSparkle(){
+
+    const sparkle =
+    document.createElement("div");
+
+
+    sparkle.className =
+    "sparkle";
+
+
+    sparkle.style.left =
+    Math.random() * 100 + "vw";
+
+
+    sparkle.style.top =
+    Math.random() * 100 + "vh";
+
+
+    sparkle.style.animationDelay =
+    Math.random() * 2 + "s";
+
+
+    sparkleContainer.appendChild(
+        sparkle
+    );
+
+
+    setTimeout(() => {
+
+        sparkle.remove();
+
+    },3000);
+
+}
+
+
+setInterval(
+    createSparkle,
+    250
+);
+
+
+
+/* =====================================================
+   SIMPLE WEDDING MUSIC
+===================================================== */
+
+let audioContext = null;
+
+let musicPlaying = false;
+
+let musicTimer = null;
+
+
+
+function startMusic(){
+
+    if(musicPlaying)
+        return;
+
+
+    audioContext =
+    new (
+        window.AudioContext ||
+        window.webkitAudioContext
+    )();
+
+
+    musicPlaying = true;
+
+
+    playSoftMusic();
+
+
+    document
+    .getElementById("musicBtn")
+    .innerHTML = "🔊";
+
+}
+
+
+
+function playSoftMusic(){
+
+    if(
+        !musicPlaying ||
+        !audioContext
+    )
+        return;
+
+
+    const notes = [
+
+        261.63,
+        329.63,
+        392.00,
+        329.63,
+        293.66,
+        349.23,
+        440.00,
+        349.23
+
+    ];
+
+
+    let index = 0;
+
+
+    function playNote(){
+
+        if(!musicPlaying)
+            return;
+
+
+        const oscillator =
+        audioContext
+        .createOscillator();
+
+
+        const gain =
+        audioContext
+        .createGain();
+
+
+        oscillator.type =
+        "sine";
+
+
+        oscillator.frequency.value =
+        notes[index];
+
+
+        gain.gain.setValueAtTime(
+
+            0,
+
+            audioContext.currentTime
+
+        );
+
+
+        gain.gain.linearRampToValueAtTime(
+
+            0.045,
+
+            audioContext.currentTime + 0.05
+
+        );
+
+
+        gain.gain.linearRampToValueAtTime(
+
+            0,
+
+            audioContext.currentTime + 1.2
+
+        );
+
+
+        oscillator.connect(gain);
+
+        gain.connect(
+            audioContext.destination
+        );
+
+
+        oscillator.start();
+
+
+        oscillator.stop(
+
+            audioContext.currentTime + 1.25
+
+        );
+
+
+        index =
+        (index + 1) %
+        notes.length;
+
+
+        musicTimer =
+        setTimeout(
+            playNote,
+            1250
+        );
+
+    }
+
+
+    playNote();
+
+}
+
+
+
+function stopMusic(){
+
+    musicPlaying = false;
+
+
+    if(musicTimer){
+
+        clearTimeout(
+            musicTimer
+        );
+
+        musicTimer = null;
+
+    }
+
+
+    if(audioContext){
+
+        audioContext.close();
+
+        audioContext = null;
+
+    }
+
+
+    document
+    .getElementById("musicBtn")
+    .innerHTML = "🎵";
+
+}
+
+
+
+function toggleMusic(){
+
+    if(musicPlaying){
+
+        stopMusic();
+
+    }
+
+    else{
+
+        startMusic();
+
+    }
+
+}
+
+
+
+/* =====================================================
+   START MUSIC WHEN OPEN INVITATION IS CLICKED
+===================================================== */
+
+const originalNextSection =
+nextSection;
+
+
+nextSection =
+function(number){
+
+    originalNextSection(number);
+
+
+    if(
+        number === 2 &&
+        !musicPlaying
+    ){
+
+        startMusic();
+
+    }
+
+};
+
+</script>
+
+
+</body>
+
+</html>
